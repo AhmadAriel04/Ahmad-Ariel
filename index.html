@@ -1,0 +1,476 @@
+<html>
+
+<head>
+    <title>Portofolio Saya</title>
+<style>
+    *,
+:root {
+  --bg-color: #f2f2f2;
+  --text-color: #333;
+  --primary-color: #2575fc;
+  --card--bg: white;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #b1cbf9;
+  --card-bg: #2c2c2c;
+}
+
+header {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  animation: fadeInDown 1s ease-out;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+nav {
+  background: #333;
+  text-align: center;
+  animation: slideInTop 1s ease-in-out;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #444;
+  animation: pulse 0.5s;
+}
+
+.toggle-btn {
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.container {}
+
+.navbar-container {
+    background-color: #333;
+    text-align: center;
+}
+
+.ul-navbar {  
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.li-navbar {
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  font-size: 30px;
+}
+
+/* #biodata { */ */
+  background: white;
+  width: 100px;
+  height: 100px;
+}
+
+.li-navbar:hover {
+  background-color: black;
+  transition: .5s ease-in-out;
+  transition-delay: .3s;
+  border-radius: 8px;
+}
+.a-navbar {
+  display: inline-block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.a-navbar :hover {
+  background: #575757;
+}
+
+.container-content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.section {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+}
+
+.skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      animation: bounceIn 1s;
+    }
+
+.skill {
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: transform 0.3s;
+}
+
+.skill:hover {
+      transform: scale(1.1);
+}
+
+.projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+}
+
+.project-card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: slideInLeft 1s ease;
+}
+
+.project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.Profil-img {
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(red, green, blue, alpha);
+}
+
+.btn-download {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.contact {
+  background: #333;
+  color: white;
+  padding: 30px 20px;
+}
+
+.contact p {
+  margin: 10px 0;
+}
+
+.a-content {
+  padding: 10px 20px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+input,textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-kirim {
+      padding: 10px 20px;
+      background: #2575fc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s;
+}
+
+.btn-kirim:hover {
+      transform: scale(1.05);
+      animation: pulse 0.4s;
+}
+
+.error {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+}
+
+.container-footer {
+  height: 10vh;
+  background-color: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+.h1-footer {
+  font -size: 40px;s
+  color: white;
+}
+
+@keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; } 
+}
+
+@keyframes slideInTop {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes wiggle {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+}
+
+@keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+}
+
+@keyframes backgroundFade {
+      from { background-color: #ffffff; }
+      to { background-color: var(--bg-color); }
+}
+
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>AHMAD ARIEL RAFAI</h1>
+        <p>Web Developer Pemula | Mahasiswa</p>
+        <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Ganti Mode</button>
+    </header>
+
+    
+        <!-- NAVIGATION BAR -->
+    <nav>
+    <a href="#about">Tentang</a>
+    <a href="#skills">Keahlian</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+        <div id="about" class="container-content">
+          <h2>Tentang Saya</h2>
+          <img src="c:\Users\Ahmad Ariel Rafai\OneDrive\문서\Foto Saya.jpg" alt="Foto Profil" class="Profil-img"/>
+          <p>Halo! Saya Ahmad Ariel Rafai, mahasiswa yang sedang belajar pengembangan web. Saya tertarik pada dunia teknologi, desain, dan membuat aplikasi yang bermanfaat</p>
+          <a href="c:\Users\Ahmad Ariel Rafai\OneDrive\문서\CV 2.pdf" class="btn-download" download>DOWNLOAD CV</a>
+          </a>
+            
+        </div>
+
+    <section id="skills" class="section">
+            <h2>Keahlian</h2>
+            <div class="skills">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">PHP</div>
+                <div class="skill">MySQL</div>
+        </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Proyek Saya</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Website Profil</h3>
+        <p>Website ini adalah latihan saya untuk membuat tampilan HTML + CSS yang responsif dan menarik.</p>
+      </div>
+      <div class="project-card">
+        <h3>Aplikasi Todo List</h3>
+        <p>Web app untuk mencatat daftar kegiatan harian menggunakan HTML, CSS, dan JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Hubungi Saya</h2>
+    <form id="contact-form">
+      <label>Nama</label>
+      <input type="text" name="nama" id="nama" required />
+      <div id="error-nama" class="error"></div>
+      <label>Email</label>
+      <input type="email" name="email" id="email" required />
+      <div id="error-email" class="error"></div>
+      <label>Pesan</label>
+      <textarea name="pesan" id="pesan" rows="4" required></textarea>
+      <div id="error-pesan" class="error"></div>
+      <button type="submit" class="btn-kirim">Kirim</button>
+    </form>
+  </section>
+
+
+        <!--NAVIGATION SELESAI -->
+
+        
+        <!-- CONTENT 1 -->
+        <div class="container-content">
+            <a href=class="a-content">
+                <p></p>
+
+                <!-- DATASCRIPT START -->
+                <div id="biodata"></div>
+                <!-- DATASCRIPT END -->
+            </a>
+
+        </div>
+        <!-- CONTENT 1 SELESAI -->
+
+        <!-- FOOTER -->
+        <div class="container-footer">
+        </div>
+        <!-- FOOTER END -->
+    </div>
+    <!-- <script src="data.js" /> -->
+
+    <footer>
+    &copy; 2025 Ahmad Ariel Rafai. Dibuat dengan ❤
+    </footer>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+
+      }
+
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let valid = true;
+
+      const nama = document.getElementById("nama");
+      const email = document.getElementById("email");
+      const pesan = document.getElementById("pesan");
+
+      const errorNama = document.getElementById("error-nama");
+      const errorEmail = document.getElementById("error-email");
+      const errorPesan = document.getElementById("error-pesan");
+
+      errorNama.textContent = "";
+      errorEmail.textContent = "";
+      errorPesan.textContent = "";
+
+      if (nama.value.trim() === "") {
+        errorNama.textContent = "Nama harus diisi.";
+        valid = false;
+      }
+      if (email.value.trim() === "" || !email.value.includes("@")) {
+        errorEmail.textContent = "Email tidak valid.";
+        valid = false;
+      }
+      if (pesan.value.trim() === "") {
+        errorPesan.textContent = "Pesan tidak boleh kosong.";
+        valid = false;
+      }
+
+      if (valid) {
+        alert("Terima kasih! Pesan Anda telah dikirim.");
+        this.reset();
+      }
+    });
+
+    window.addEventListener("scroll", () => {
+      const sections = document.querySelectorAll(".section");
+      sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 150;
+        const height = sec.offsetHeight;
+        if (top >= offset && top < offset + height) {
+          sec.style.animation = "fadeIn 1.5s ease forwards";
+        }
+      });
+    });
+    </script>
+</body>
+
+</html>
